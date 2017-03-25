@@ -1,0 +1,30 @@
+<style>
+    .today{
+        background-color: aquamarine;
+    }     
+</style>
+<div>  
+    <input class="form-control" type="month" ng-model="$ctrl.newDate">
+    <button class="btn btn-default" ng-click="$ctrl.changeDate()">OK</button>
+</div>
+<div>  
+    <span>{{$ctrl.month.format("MMMM, YYYY")}}</span>
+</div>
+<table class="">
+    <thead>
+        <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="week in $ctrl.weeks">
+            <td ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected)}" ng-repeat="day in week.days" ng-click="$ctrl.openModal(day)">{{day.number}}</td>
+        </tr>
+    </tbody>
+</table>
