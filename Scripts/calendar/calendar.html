@@ -1,16 +1,11 @@
-<style>
-    .today{
-        background-color: aquamarine;
-    }     
-</style>
-<div>  
-    <input class="form-control" type="month" ng-model="$ctrl.newDate">
-    <button class="btn btn-default" ng-click="$ctrl.changeDate()">OK</button>
+<div class="title-room">  
+    <input class="form-control input-date" type="month" ng-model="$ctrl.newDate" ng-keypress="($event.which === 13)?$ctrl.changeDate():0" placeholder="yyyy-mm">
+    <button class="btn btn-default" ng-click="$ctrl.changeDate()">Change</button>
 </div>
-<div>  
-    <span>{{$ctrl.month.format("MMMM, YYYY")}}</span>
+<div class="title-room">   
+    <span class="title">{{$ctrl.month.format("MMMM, YYYY")}}</span>
 </div>
-<table class="">
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>Sun</th>

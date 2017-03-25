@@ -1,6 +1,5 @@
 (function () {
     'use strict';
-
     function calendarController($scope,$uibModal) {
         var ctrl = this;
         ctrl.day = moment();
