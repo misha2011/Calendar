@@ -2,8 +2,8 @@
     background-color: #E3F2FF;
 }
 .title-room{
-    width:60vw; 
-    height: 40px;
+    width:58vw; 
+    height: 38px;
     min-width: 299px;
 }
 .title{
@@ -17,8 +17,8 @@
     text-align: center; 
 }
 .table{
-    width:60vw; 
-    height: 40vw;
+    width:58vw; 
+    height: 38vw;
 }
 td{
     width: 10%;
@@ -36,6 +36,10 @@ th{
     width: auto;
     display: inline;    
 }
+.btm-today{
+    float: right;
+    margin-top: 1px;
+}
 @media screen and (max-width: 768px) {
     td {
          font-size: 12;
@@ -45,5 +49,9 @@ th{
     }
     .title{
        font-size: 20; 
+    }
+    .input-date{
+        width: 30vw;
+        min-width: 154px;
     }
 }

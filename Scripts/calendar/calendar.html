@@ -1,6 +1,7 @@
 <div class="title-room">  
     <input class="form-control input-date" type="month" ng-model="$ctrl.newDate" ng-keypress="($event.which === 13)?$ctrl.changeDate():0" placeholder="yyyy-mm">
     <button class="btn btn-default" ng-click="$ctrl.changeDate()">Change</button>
+    <button class="btn btn-default btm-today" ng-click="$ctrl.today()">Today</button>
 </div>
 <div class="title-room">   
     <span class="title">{{$ctrl.month.format("MMMM, YYYY")}}</span>
@@ -19,7 +20,7 @@
     </thead>
     <tbody>
         <tr ng-repeat="week in $ctrl.weeks">
-            <td ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected)}" ng-repeat="day in week.days" ng-click="$ctrl.openModal(day)">{{day.number}}</td>
+            <td ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth}" ng-repeat="day in week.days" ng-click="$ctrl.openModal(day)">{{day.number}}</td>
         </tr>
     </tbody>
 </table>
