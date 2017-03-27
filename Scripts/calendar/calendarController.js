@@ -5,6 +5,7 @@
         ctrl.day = moment();
         ctrl.newDate = new Date(ctrl.day);
         ctrl.selected = "=";
+        //ctrl.today();
         ctrl._removeTime = function (date) {            
             return date.day(0).hour(0).minute(0).second(0).millisecond(0);
         }
@@ -43,7 +44,7 @@
         };
         ctrl.today = function(){
             ctrl.month = moment(); 
-             ctrl.selectDate(moment());
+            ctrl.selectDate(moment());
         }
         ctrl.selectDate = function(day){
                 ctrl.selected = ctrl._removeTime (day);
@@ -53,11 +54,7 @@
                 ctrl._removeTime(start.day(0));        
                 ctrl._buildMonth(start, ctrl.month);
         }
-        ctrl.month = moment();       
-        var start = ctrl._removeTime (moment());         
-        start.date(1);
-        ctrl._removeTime(start.day(0));        
-        ctrl._buildMonth(start, ctrl.month); 
+        ctrl.today();       
         ///modal window selected date
          ctrl.openModal = function (date) {
                 var ModalInstance = $uibModal.open({

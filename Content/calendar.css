@@ -32,6 +32,9 @@ th{
 .calendar{
     margin-top: 1%;   
 }
+.different-month{
+     color:#C0C0C0;
+}
 .input-date{
     width: auto;
     display: inline;    
